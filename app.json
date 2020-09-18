@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "testing-app",
-    "slug": "testing-app",
+    "name": "metallica-soundboard",
+    "slug": "metallica-soundboard",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/metallica-logo.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
