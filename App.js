@@ -43,11 +43,6 @@ class App extends React.Component {
     ]
   }
 
-  playAudio = async (audio) => {
-    await this.sound.loadAsync(audio, this.sound.status, false);
-    this.sound.playAsync();
-  }
-
   render() {
     return (
       <PaperProvider>
