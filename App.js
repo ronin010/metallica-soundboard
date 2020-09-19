@@ -14,12 +14,14 @@ import { Provider as PaperProvider } from 'react-native-paper';
 
 // create drawer navigator
 const DrawerNavigation = createDrawerNavigator(
+  // configure menu routes
   {
     Home: Home,
     Settings: Settings,
     Privacy: Privacy,
     Credits: Credits
   },
+  // configure menu settings
   {
     initialRouteName: "Home",
     drawerBackgroundColor: "black",
@@ -30,6 +32,7 @@ const DrawerNavigation = createDrawerNavigator(
   }
 )
 
+// define router to handle navigation throughout app
 const Router = createAppContainer(
   createSwitchNavigator({
     DrawerNavigation
@@ -37,14 +40,9 @@ const Router = createAppContainer(
 )
 
 class App extends React.Component {
-  state = {
-    clips: [
-      
-    ]
-  }
-
   render() {
     return (
+      // wrap route in PaperProvider to allow access to Paper UI
       <PaperProvider>
         <Router />
       </PaperProvider>
