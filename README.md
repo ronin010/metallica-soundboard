@@ -10,6 +10,16 @@ npm run android
 
 ```
 
+<h2>Make sure you have npm, NodeJS and the expo-cli install: </h2>
+
+<p>Linux / Mac OS</p>
+
+```
+sudo apt install npm nodejs -y
+sudo npm install -g expo-cli
+
+```
+
 <h2>Technology used: </h2>
 
  * React native
