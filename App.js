@@ -43,24 +43,6 @@ class App extends React.Component {
     ]
   }
 
-  async componentDidMount() {
-    Audio.setAudioModeAsync({
-      allowsRecordingIOS: false,
-      interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
-      playsInSilentModeIOS: true,
-      interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DUCK_OTHERS,
-      shouldDuckAndroid: true,
-      staysActiveInBackground: true,
-      playThroughEarpieceAndroid: false
-    });
-
-    this.sound = new Audio.Sound();
-    const status = {
-      shouldPlay: false,
-      volume: 1.0
-    }
-  }
-
   playAudio = async (audio) => {
     await this.sound.loadAsync(audio, this.sound.status, false);
     this.sound.playAsync();
