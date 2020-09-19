@@ -1,5 +1,15 @@
 ## Metallica Soundboard Android Application
 
+<h2>Installation instructions</h2>
+
+```
+git clone https://github.com/ronin010/metallica-soundboard.git
+cd metallica-soundboard
+npm install
+npm run android
+
+```
+
 <h2>Technology used: </h2>
 
  * React native
