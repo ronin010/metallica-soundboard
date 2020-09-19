@@ -20,6 +20,14 @@ sudo npm install -g expo-cli
 
 ```
 
+<p>Windows: </p>
+
+```
+https://nodejs.org/en/download/
+npm install -g expo-cli
+
+```
+
 <h2>Technology used: </h2>
 
  * React native
