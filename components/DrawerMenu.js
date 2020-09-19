@@ -11,8 +11,10 @@ import {
 import Icon from "react-native-vector-icons/FontAwesome"
 
 const menuData = [
-  { icon: "home", name: "Home", screenName: "Home", key: 1 },
-  { icon: "cog", name: "Settings", screenName: "Settings", key: 2 },
+  { icon: "home", name: "Home", screenName: "Home", key: "1" },
+  { icon: "cog", name: "Settings", screenName: "Settings", key: "2" },
+  { icon: "user-secret", name: "Privacy", screenName: "Privacy", key: "3" },
+  { icon: "list-alt", name: "Credits", screenName: "Credits", key: "4" },
 ];
 
 class DrawerMenu extends Component {
