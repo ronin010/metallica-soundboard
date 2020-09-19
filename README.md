@@ -10,4 +10,4 @@
 <h2>Problems Face and Solutions: </h2>
 
  <h4>Problem : Cannot dynamically require files</h4>
- <h4>Solotuin : Created an external data structure where files are required there</h4>
+ <h4>Solution : Created an external data structure where files are required there</h4>
