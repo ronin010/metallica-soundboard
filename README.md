@@ -35,7 +35,7 @@ npm install -g expo-cli
  * Expo AV (audio player)
  * FontAwesome Icons
 
-<h2>Problems Face and Solutions: </h2>
+<h2>Problems Faced and Solutions: </h2>
 
  <h4>Problem : Cannot dynamically require files</h4>
  <h4>Solution : Created an external data structure where files are required there</h4>
