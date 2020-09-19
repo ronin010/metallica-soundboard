@@ -10,7 +10,7 @@ npm run android
 
 ```
 
-<h2>Make sure you have npm, NodeJS and the expo-cli install: </h2>
+<h2>Make sure you have npm, NodeJS and the expo-cli installed: </h2>
 
 <p>Linux / Mac OS</p>
 
