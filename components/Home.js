@@ -1,62 +1,85 @@
 import React, {useState} from "react";
-import { StyleSheet, Text, View, TextInput, FlatList, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, TextInput, FlatList, TouchableOpacity, Image, SafeAreaView } from 'react-native';
 import { Button } from 'react-native-paper';
-
 import Icon from "react-native-vector-icons/FontAwesome"
-
+import { Avatar } from 'react-native-paper';
+import Kirk from "./Kirk";
+import James from "./James"
 
 const Home = ({navigation}) => {
-  const [member, setMember] = useState("james");
+  const [currentMember, setCurrentMember] = useState("james");
+  const [members, setmembers] = useState([
+    {
+      name: "james",
+      id: 1
+    },
+    {
+      name: "kirk",
+      id: 2
+    },
+    {
+      name: "lars",
+      id: 3
+    },
+    {
+      name: "rob",
+      id: 4
+    }
+  ]);
 
   const changeMember = (m) => {
-    setMember(m);
+    setCurrentMember(m);
   }
 
   return (
-    <View style={{backgroundColor: "black"}}>
+    <SafeAreaView style={{backgroundColor: "black", flex: 1, paddingTop: 10}}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
           <Icon name="bars" size={25} color="white" />
         </TouchableOpacity>
-        <Text style={{color: "white", fontSize: 16}}>Metallica Soundboard</Text>
+        <Text style={{color: "white", fontSize: 22}}>Metallica Soundboard</Text>
       </View>
-        <View style={styles.menuButtons}>
-        <Button style={styles.menuButton} color="white" mode="text" onPress={() => changeMember("james")}>
-          James
-        </Button>
-        <Button style={styles.menuButton} color="white" mode="text" onPress={() => changeMember("kirk")}>
-          Kirk
-        </Button>
-
-        <Button style={styles.menuButton} color="white" mode="text" onPress={() => changeMember("Rob")}>
-          Rob
-        </Button>
-        <Button style={styles.menuButton} color="white" mode="text" onPress={() => changeMember("lars")}>
-          Lars
-        </Button>
-        </View>
-    </View>
+      <View style={styles.menuButtons}>
+        {
+          members.map((member) => {
+            return (
+              <Button key={member.id} style={styles.menuButton} color="white" mode="text" onPress={() => changeMember(member.name)}>
+                {member.name === currentMember ? <Text style={{ color: "#f44336"}}>{member.name}</Text> : <Text>{member.name}</Text>}
+              </Button>
+            )
+          })
+        }
+      </View>
+      <View style={{backgroundColor: "white", flex: 3}}>
+        {
+          {
+            "kirk": <Kirk />,
+            "james": <James />
+          }[currentMember]
+        }
+      </View>
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
   header: {
-    height: 50,
     width: "100%",
-    flex: 1,
+    flex: 0,
     backgroundColor: "black",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-around",
-    padding: 40,
-    paddingLeft: 60,
-    paddingRight: 140,
-    paddingTop: 60,
-    color: "white"
+    paddingTop: 20,
+    paddingBottom: 30,
+    color: "white",
+    borderBottomColor: "white",
+    borderBottomWidth: 2,
   },
   menuButton: {
     width: "25%",
-    fontSize: 12
+    fontSize: 12,
+    backgroundColor: "black"
   },
   menuButtons: {
     alignItems: "center", 
@@ -65,7 +88,9 @@ const styles = StyleSheet.create({
     marginTop: 20, 
     marginBottom: 20,
     backgroundColor: "black",
-    color: "white"
+    color: "white",
+    flex: 0,
+    padding: 10
   }
 })
 
