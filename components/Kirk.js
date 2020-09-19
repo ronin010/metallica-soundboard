@@ -5,6 +5,7 @@ import {Audio} from "expo-av";
 import {Files} from "../audio/kirk/Files";
 
 class Kirk extends Component {
+  // set state.files to the import files array
   state = {
     files: Files
   }
@@ -18,6 +19,7 @@ class Kirk extends Component {
       playThroughEarpieceAndroid: false
     });
 
+    // create new object to access audio playing methods
     this.sound = new Audio.Sound();
     const status = {
       shouldPlay: false,
@@ -39,8 +41,10 @@ class Kirk extends Component {
     return ( 
       <View style={{ flexDirection: "row", flexWrap: "wrap", width: "100%", position:'absolute', alignItems: "center", marginTop: 20}}>
         {
+          // map the files and return a touchable area for each one to play the audio 
           this.state.files.map((file) => {
             return (
+              // each touchable area with have an onPress to play the audio, and the specific clip for the iteration is passed to the function
               <TouchableOpacity style={{width: "33.33%", marginBottom: 20, alignItems: "center"}} key={file.id} onPress={() => this.handlePlayAudio(file.clip)}>
                 <View>
                   <Avatar.Image size={60} source={file.image} />
