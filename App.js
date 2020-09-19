@@ -6,7 +6,8 @@ import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import Home from "./components/Home";
 import Settings from "./components/Settings";
-import {AudioFiles} from "./AudioFiles";
+import Privacy from "./components/Privacy";
+import Credits from "./components/Credits";
 import {FontAwesome5} from "@expo/vector-icons";
 import DrawerMenu from "./components/DrawerMenu";
 import { Provider as PaperProvider } from 'react-native-paper';
@@ -15,7 +16,9 @@ import { Provider as PaperProvider } from 'react-native-paper';
 const DrawerNavigation = createDrawerNavigator(
   {
     Home: Home,
-    Settings: Settings
+    Settings: Settings,
+    Privacy: Privacy,
+    Credits: Credits
   },
   {
     initialRouteName: "Home",
@@ -66,7 +69,7 @@ class App extends React.Component {
   render() {
     return (
       <PaperProvider>
-      <Router />
+        <Router />
       </PaperProvider>
     );
   } 
