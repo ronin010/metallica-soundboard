@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput, FlatList, TouchableOpacity, Image, S
 import { Button } from 'react-native-paper';
 import Icon from "react-native-vector-icons/FontAwesome"
 
-const Settings = ({navigation}) => {
+const Credits = ({navigation}) => {
   return (
     <SafeAreaView style={{backgroundColor: "black", flex: 1, paddingTop: 10}}>
       <View style={styles.header}>
@@ -13,7 +13,7 @@ const Settings = ({navigation}) => {
         <Text style={{color: "white", fontSize: 22}}>Metallica Soundboard</Text>
       </View>
       <View style={{justifyContent: "center", alignItems: "center"}}>
-        <Text style={{color: "white", textAlign: "center"}}>Settings Page</Text>
+        <Text style={{color: "white", textAlign: "center"}}>Credits Page</Text>
       </View>
     </SafeAreaView>
   )
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Settings;
+export default Credits;
