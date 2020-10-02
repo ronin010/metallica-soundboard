@@ -1,10 +1,10 @@
 import React, {Component} from "react";
-import { StyleSheet, Text, View, TextInput, FlatList, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, TextInput, FlatList, TouchableOpacity, Image,  } from 'react-native';
 import { Avatar } from 'react-native-paper';
 import {Audio} from "expo-av";
-import {Files} from "../audio/james/Files";
+import {Files} from "../audio/rob/Files";
 
-class James extends Component {
+class Rob extends Component {
   // set state.files to the import files array
   state = {
     files: Files
@@ -38,9 +38,9 @@ class James extends Component {
   }
 
   render() {
-    return (
+    return ( 
       <View style={{ flexDirection: "row", flexWrap: "wrap", width: "100%", position:'absolute', alignItems: "center", marginTop: 20}}>
-        { 
+        {
           // map the files and return a touchable area for each one to play the audio 
           this.state.files.map((file) => {
             return (
@@ -55,8 +55,9 @@ class James extends Component {
           })
         }
       </View>
+      
     )
   }
 }
 
-export default James;
+export default Rob;

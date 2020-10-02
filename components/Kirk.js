@@ -45,11 +45,11 @@ class Kirk extends Component {
           this.state.files.map((file) => {
             return (
               // each touchable area with have an onPress to play the audio, and the specific clip for the iteration is passed to the function
-              <TouchableOpacity style={{width: "33.33%", marginBottom: 20, alignItems: "center"}} key={file.id} onPress={() => this.handlePlayAudio(file.clip)}>
+              <TouchableOpacity style={{width: "33.33%", marginBottom: 50, alignItems: "center"}} key={file.id} onPress={() => this.handlePlayAudio(file.clip)}>
                 <View>
                   <Avatar.Image size={60} source={file.image} />
                 </View>
-                <Text style={{fontSize: 12, marginTop: 10}}>{file.title.toUpperCase()}</Text>    
+                <Text style={{fontSize: 12, marginTop: 10, color: "white"}}>{file.title.toUpperCase()}</Text>    
               </TouchableOpacity>  
             )
           })

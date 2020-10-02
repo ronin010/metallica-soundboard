@@ -6,9 +6,9 @@
     "orientation": "portrait",
     "icon": "./assets/metallica-logo.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/metallica-logo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,6 +21,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }

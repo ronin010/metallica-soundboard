@@ -5,6 +5,7 @@ import Icon from "react-native-vector-icons/FontAwesome"
 import { Avatar } from 'react-native-paper';
 import Kirk from "./Kirk";
 import James from "./James"
+import Rob from "./Rob";
 
 const Home = ({navigation}) => {
   const [currentMember, setCurrentMember] = useState("james");
@@ -50,11 +51,12 @@ const Home = ({navigation}) => {
           })
         }
       </View>
-      <View style={{backgroundColor: "white", flex: 3}}>
+      <View style={{backgroundColor: "#222222", flex: 3}}>
         {
           {
             "kirk": <Kirk />,
-            "james": <James />
+            "james": <James />,
+            "rob": <Rob />
           }[currentMember]
         }
       </View>
